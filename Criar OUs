@@ -1,0 +1,91 @@
+New-ADOrganizationalUnit –Name "EST Users" -Path “DC=A-INC, DC=local”;
+
+    New-ADOrganizationalUnit -Name "Dep. de Marketing" -Path "OU= EST Users,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Novos Produtos" -Path "OU=Dep. de Marketing,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"rita.soares" -Path "OU=Novos Produtos,OU=Dep. de Marketing,OU= EST Users,DC=A-INC, DC=local"; 
+
+        New-ADOrganizationalUnit -Name "Atendimento ao Cliente" -Path "OU=Dep. de Marketing,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"joao.nunes" -Path "OU=Atendimento ao Cliente,OU=Dep. de Marketing,OU= EST Groups, DC=A-INC, DC=Local"; 
+
+        New-ADOrganizationalUnit -Name "Social-Media" -Path "OU=Dep. de Marketing,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"andre.pinheiro" -Path "OU=Social-Media,OU=Dep. de Marketing,OU= EST Groups, DC=A-INC, DC=Local"; 
+
+
+    New-ADOrganizationalUnit -Name "Dep. de Vendas" -Path "OU= EST Users,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Propostas" -Path "OU=Dep. de Vendas,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"pedro.duarte" -Path "OU=Propostas,OU=Dep. de Vendas,OU= EST Users,DC=A-INC, DC=local"; 
+
+        New-ADOrganizationalUnit -Name "Contrato" -Path "OU=Dep. de Vendas,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"lorena.melo" -Path "OU=Contrato,OU=Dep. de Vendas,OU= EST Users,DC=A-INC, DC=local"; 
+
+        New-ADOrganizationalUnit -Name "Faturamentos" -Path "OU=Dep. de Vendas,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"diogo.marco" -Path "OU=Faturamentos,OU=Dep. de Vendas,OU= EST Users,DC=A-INC, DC=local"; 
+
+
+    New-ADOrganizationalUnit -Name "Dep. Administrativo" -Path "OU= EST Users,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Tecnicos Informaticos" -Path "OU=Dep. Administrativo,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"hugo.vieira" -Path "OU=Tecnicos Informaticos,OU=Dep. Administrativo,OU= EST Groups, DC=A-INC, DC=Local"; 
+
+        New-ADOrganizationalUnit -Name "Recursos Humanos" -Path "OU=Dep. Administrativo,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"raimunda.lara" -Path "OU=Recursos Humanos,OU=Dep. Administrativo,OU= EST Groups, DC=A-INC, DC=Local"; 
+
+
+    New-ADOrganizationalUnit -Name "Dep. de Logistiga e Financeiro" -Path "OU= EST Users,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Contabilidade" -Path "OU=Dep. de Logistiga e Financeiro,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"pedro.almeida" -Path "OU=Contabilidade,OU=Dep. de Logistiga,OU= EST Groups, DC=A-INC, DC=Local"; 
+
+        New-ADOrganizationalUnit -Name "Tesouraria" -Path "OU=Dep. de Logistiga e Financeiro,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"alexandra.carolina" -Path "OU=Tesouraria,OU=Dep. de Logistiga,OU= EST Groups, DC=A-INC, DC=Local"; 
+
+        New-ADOrganizationalUnit -Name "Gestao de Inventario" -Path "OU=Dep. de Logistiga e Financeiro,OU= EST Users,DC=A-INC, DC=local";
+            NewADUser -Name"juan.nascimento" -Path "OU=Gestao de Inventario,OU=Dep. de Logistiga,OU= EST Groups, DC=A-INC, DC=Local"; 
+
+
+
+New-ADOrganizationalUnit –Name "EST Computadores" -Path “DC=A-INC, DC=local”;
+
+    New-ADOrganizationalUnit -Name "Dep. de Marketing" -Path "OU= EST Computadores,DC=A-INC, DC=local";
+        New-ADComputer -name "DM.D.01" -Path "OU=Dep. de Marketing,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DM.D.02" -Path "OU=Dep. de Marketing,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DM.W.01" -Path "OU=Dep. de Marketing,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DM.I.01" -Path "OU=Dep. de Marketing,OU= EST Computadores,DC=A-INC, DC=local"; 
+
+    New-ADOrganizationalUnit -Name "Dep. de Vendas" -Path "OU= EST Computadores,DC=A-INC, DC=local";
+        New-ADComputer -name "DV.D.01" -Path "OU=Dep. de Vendas,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DV.D.02" -Path "OU=Dep. de Vendas,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DV.W.01" -Path "OU=Dep. de Vendas,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DV.I.01" -Path "OU=Dep. de Vendas,OU= EST Computadores,DC=A-INC, DC=local"; 
+
+    New-ADOrganizationalUnit -Name "Dep. Administrativo" -Path "OU= EST Computadores,DC=A-INC, DC=local";
+        New-ADComputer -name "DA.D.01" -Path "OU=Dep. de Administrativo,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DA.D.02" -Path "OU=Dep. de Administrativo,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DA.W.01" -Path "OU=Dep. de Administrativo,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DA.I.01" -Path "OU=Dep. de Administrativo,OU= EST Computadores,DC=A-INC, DC=local"; 
+
+    New-ADOrganizationalUnit -Name "Dep. de Logistiga e Financeiro" -Path "OU= EST Computadores,DC=A-INC, DC=local";
+        New-ADComputer -name "DF.D.01" -Path "OU=Dep. de Logistiga e Financeiro,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DF.D.02" -Path "OU=Dep. de Logistiga e Financeiro,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DF.W.01" -Path "OU=Dep. de Logistiga e Financeiro,OU= EST Computadores,DC=A-INC, DC=local"; 
+        New-ADComputer -name "DF.I.01" -Path "OU=Dep. de Logistiga e Financeiro,OU= EST Computadores,DC=A-INC, DC=local"; 
+
+
+New-ADOrganizationalUnit –Name "EST Groups" -Path “DC=A-INC, DC=local”;
+
+    New-ADOrganizationalUnit -Name "Dep. de Marketing" -Path "OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Novos Produtos" -Path "OU=Dep. de Marketing,OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Atendimento ao Cliente" -Path "OU=Dep. de Marketing,OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Social-Media" -Path "OU=Dep. de Marketing,OU= EST Groups,DC=A-INC, DC=local";
+
+    New-ADOrganizationalUnit -Name "Dep. de Vendas" -Path "OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Propostas" -Path "OU=Dep. de Vendas,OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Contrato" -Path "OU=Dep. de Vendas,OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Faturamentos" -Path "OU=Dep. de Vendas,OU= EST Groups,DC=A-INC, DC=local";
+
+    New-ADOrganizationalUnit -Name "Dep. Administrativo" -Path "OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Tecnicos Informaticos" -Path "OU=Dep. Administrativo,OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Recursos Humanos" -Path "OU=Dep. Administrativo,OU= EST Groups,DC=A-INC, DC=local";
+
+    New-ADOrganizationalUnit -Name "Dep. de Logistiga e Financeiro" -Path "OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Contabilidade" -Path "OU=Dep. de Logistiga e Financeiro,OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Tesouraria" -Path "OU=Dep. de Logistiga e Financeiro,OU= EST Groups,DC=A-INC, DC=local";
+        New-ADOrganizationalUnit -Name "Gestao de Inventario" -Path "OU=Dep. de Logistiga e Financeiro,OU= EST Groups,DC=A-INC, DC=local";
